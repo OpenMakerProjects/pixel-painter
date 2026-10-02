@@ -1,47 +1,25 @@
-# pixel-painter
+# Pixel-Painter
 
-This repository is a curated project extracted from the OpenMakerProjects review archive.
+## What is it
 
-## Provenance and licence
+The idea is that you prep your Arduino with an image. This image will be rendered one column at a time on your neopixel strip. You'll setup a camera (or iPhone camera with some fancy app) to have a really long exposure.
+When you move the pixel strip horizontally, as the camera image is being exposed, you should get your original image as result. Somewhat blurry maybe (and low resolution).
 
-- Original source: [mattiasjahnke/arduino-projects](https://github.com/mattiasjahnke/arduino-projects/tree/45373bc41f01b8a12860bd6de89f43958e0c71e9/pixel-painter)
-- Reviewed upstream revision: `45373bc41f01b8a12860bd6de89f43958e0c71e9`
-- Licence: `MIT`; see [LICENSE](LICENSE)
-- Exact source-file matches used for provenance: 3
+## Circuit
+Not much to it; connect your neopixel strip to the Arduino. Attach that neopixel strip to something. Like a plank.
 
-The archived upstream documentation is preserved in [UPSTREAM_README.md](UPSTREAM_README.md).
+## Code
 
-## Supported board
+This project consists of two parts
 
-- Arduino-compatible board; exact model requires hardware verification
+### Arduino code
 
-## Parts list
+The code that will turn your neopixel strip into a blur of colors.
 
-Detected or documented parts; verify quantities and ratings against the upstream documentation:
+(There's more detailed instructions inside the source code)
 
-- OLED display module
-- Addressable RGB LEDs
+### Processing code
 
-## Required libraries
+The application that will turn your image into something useful for the Arduino is written in Processing.
 
-- `Adafruit_NeoPixel.h`
-- `Adafruit_SSD1306.h`
-- `avr/pgmspace.h`
-- `avr/power.h`
-- `SPI.h`
-- `Wire.h`
-
-## Schematic status
-
-No machine-readable schematic is included. Consult the linked upstream source and verify all wiring before building.
-
-## Security and build status
-
-- No password, Wi-Fi credential, token, API-key or private-key signature was detected in the prepared files.
-- Executables, APKs, installers, nested archives and compiled firmware are excluded.
-- The project has not been independently hardware-tested by OpenMakerProjects.
-- Review voltage levels, current limits, grounding and external-load isolation before building.
-
-## Review workflow
-
-The initial import is submitted through a protected pull request. An independent approval is required before it can be merged into `main`.
+If you've never heard of processing you can read all about it [here](https://processing.org/).
